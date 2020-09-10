@@ -1,0 +1,477 @@
+  /***********general******/
+
+  * {
+      box-sizing: border-box;
+      margin: 0;
+  }
+
+  img {
+      width: 100%;
+      padding: 10px 10px 0 10px;
+      border-radius: 30px;
+      object-fit: cover;
+
+
+  }
+
+  body {
+
+      background-image: linear-gradient(0deg, #9b5656, #cc7070);
+
+  }
+
+  /***********general******/
+
+  #loopview {
+      width: 100vw;
+      max-width: 1800px;
+
+
+
+  }
+
+  #startside {
+      width: 100vw;
+      height: 56.25vw;
+      background-size: cover;
+      background-position: 50% 10%;
+      max-width: none;
+      min-height: 87vh;
+      background-image: url(imgs/pngbaggrund.png);
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+  }
+
+
+  .kategori_container {
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 10px;
+
+  }
+
+  .kategori {
+      border-radius: 17px;
+      background-color: #ffffff;
+      padding: 0px 0px 0px 0px;
+      margin: 40px 20px 10px 20px;
+      animation-timing-function: ease-in-out;
+      box-shadow: 5px 5px 12px rgb(137, 76, 76);
+
+
+  }
+
+  button {
+      border-radius: 17px;
+      border: none;
+      padding: 15px 25px 15px 25px;
+      font-family: lato;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+      background-color: rgba(255, 255, 255, 0);
+
+
+  }
+
+  .valgt {
+      background-color: #8e5959;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate;
+      animation-duration: 2s;
+
+
+  }
+
+
+
+  .loopview {
+      width: 70vw;
+      max-width: 900px;
+      padding: 30px 0 0 0;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  }
+
+  .sidebar {
+      background-color: rgba(244, 244, 244, 0.92);
+      text-align: center;
+
+  }
+
+
+
+  .sidebar {
+      background-color: rgba(244, 244, 244, 0.92);
+      text-align: center;
+
+  }
+
+
+
+  article {
+      margin: 5px;
+      border-radius: 30px;
+      background-color: rgb(250, 250, 250);
+      box-shadow: 5px 5px 12px rgb(108, 76, 76);
+  }
+
+
+  /*********** fonts ******/
+
+  h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 4.5rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      margin: 185px 50px 110px 50px;
+      justify-content: center;
+      font-weight: 800;
+  }
+
+
+
+  #startside h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.7rem;
+      color: white;
+      text-transform: none;
+      letter-spacing: 0.1rem;
+      padding: 0 0 0 0;
+      margin: 125px 250px 0px 250px;
+      justify-content: center;
+      text-align: center;
+      font-weight: 300;
+
+  }
+
+  h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+
+      top: 120px;
+
+
+      margin: 120px 0 25px 0;
+
+  }
+
+  h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      position: sticky;
+      font-weight: 300;
+      top: 370px;
+      padding: 0 50px 0 50px;
+
+
+      margin: 25px 0 25px 0;
+
+  }
+
+  h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      padding: 0 0 0 15px;
+      margin: 15px 0 5px 0;
+
+  }
+
+  p {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.06rem;
+      padding: 0 0 0 15px;
+      margin: 10px 0 30px 0;
+
+  }
+
+  p:last-child {
+      padding: 0 0 10px 15px;
+      font-size: 1.3rem;
+  }
+
+
+
+
+
+  /***********popop******/
+
+  .line {
+      border-bottom: 1px solid black;
+      margin: 0px 15px 0px 15px;
+  }
+
+
+
+
+  #popop {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(60, 60, 60, 0.8);
+      max-width: 1800px;
+      display: none;
+      z-index: 1;
+
+
+  }
+
+  #popop_article {
+      width: 60vw;
+      height: 85vh;
+      margin: 4rem auto;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 700px;
+      position: relative;
+
+
+
+  }
+
+  #luk {
+      position: absolute;
+      top: 20px;
+      right: 28px;
+      color: black;
+      padding: 10px;
+      font-family: lato;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+
+  }
+
+
+
+  #popop_article img {
+      max-width: 700px;
+      padding: 10px 10px 10px 10px;
+      border-radius: 30px;
+
+  }
+
+  #popop_article h2 {
+      padding: 0px 10px 5px 30px;
+
+
+  }
+
+  #popop_article p {
+      padding: 0px 10px 0px 30px;
+
+
+  }
+
+
+  /*********** nav ******/
+
+
+  header {
+      position: absolute;
+      right: 0;
+  }
+
+
+
+
+  nav ul {
+      background-color: rgba(0, 0, 0, 0);
+      text-align: end;
+      padding: 25px;
+      z-index: 1;
+      position: relative;
+
+
+  }
+
+  nav li {
+      display: inline;
+      background-color: rgba(0, 0, 0, 0);
+      text-align: center;
+
+  }
+
+  li {
+      display: block;
+      color: #000000;
+      padding: 34px 10px;
+      text-decoration: none;
+      font-family: 'Lato', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.11rem;
+      font-weight: 400;
+
+  }
+
+  li a {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #000000;
+  }
+
+
+
+  li a:hover {
+      color: #ffffff;
+  }
+
+
+  /*********** menu_button ******/
+
+  #menu_button {
+      border-radius: 17px;
+      border: none;
+      padding: 5px 25px 5px 25px;
+      font-family: lato;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+      background-color: rgb(255, 255, 255);
+      width: 140px;
+      height: 40px;
+
+
+  }
+
+  #menu_button {
+      border-radius: 17px;
+      border: none;
+      padding: 5px 25px 5px 25px;
+      font-family: lato;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+      background-color: rgb(38, 24, 24);
+      width: 140px;
+      height: 40px;
+      box-shadow: 5px 5px 12px rgb(155, 82, 82);
+
+
+  }
+
+
+  #menu_button a {
+      font-family: lato;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+      color: white;
+      text-decoration: none;
+
+  }
+
+  footer {
+      font-family: lato;
+      font-size: 1em;
+      text-align: center;
+      padding: 50px 0 50px 0;
+      background-color: rgb(229, 215, 215);
+      font-family: lato;
+
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+      margin: 40px 0 0 0;
+
+  }
+
+  /*********** @media ******/
+
+  @media screen and (min-width: 1500px) {
+      h1 {
+
+
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          margin: 245px 50px 160px 50px;
+          justify-content: center;
+          font-weight: 800;
+
+
+      }
+
+
+
+      #startside h2 {
+
+          font-size: 1.7rem;
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          padding: 0 0 0 0;
+          margin: 125px 350px 0px 350px;
+          justify-content: center;
+          text-align: center;
+          font-weight: 400;
+
+
+      }
+  }
+
+
+  @media screen and (max-width: 600px) {
+      .sidebar {
+
+          background-color: rgba(244, 244, 244, 0.92);
+          text-align: center;
+          display: none;
+
+
+      }
+
+      #loopview {
+          width: 100vw;
+          max-width: 1600px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: 1fr;
+
+
+      }
+
+      h1 {
+          margin: 100px 50px 110px 50px;
+      }
+
+
+
+      #startside h2 {
+          margin: 125px 35px 0px 35px;
+      }
+
+      #popop_article {
+          width: 90vw;
+          height: 85vh;
+          margin: 4rem auto;
+          background-color: white;
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 700px;
+          position: relative;
+
+      }
+  }
