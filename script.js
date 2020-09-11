@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", loadJSON)
 
 
 async function loadJSON() {
-    const loadJSON = await fetch("https://spreadsheets.google.com/feeds/list/17Dd7DvkPaFamNUdUKlrFgnH6POvBJXac7qyiS6zNRw0/od6/public/values?alt=json")
+    const loadJSON = await fetch("https://spreadsheets.google.com/feeds/list/1BGsWxPo26S0q3MziijrBCP8GVN1qP2hOO3wCT_hygCk/od6/public/values?alt=json")
     retter = await loadJSON.json();
     addEventListenerToButtons();
     visRetter();
@@ -20,10 +20,14 @@ function visRetter() {
 
             const klon = templatePointer.cloneNode(true).content;
             klon.querySelector(".navn").textContent = ret.gsx$navn.$t;
-            klon.querySelector("img").src = "imgs/small/" + ret.gsx$billede.$t + "-sm.jpg";
+            klon.querySelector(".genre").textContent = ret.gsx$genre.$t;
+            klon.querySelector(".kunstner").textContent = ret.gsx$kunstner.$t;
 
-            klon.querySelector(".kort").textContent = ret.gsx$kort.$t;
-            klon.querySelector(".pris").textContent = ret.gsx$pris.$t + "kr";
+
+
+            klon.querySelector("img").src = ret.gsx$billede.$t;
+
+
 
 
             klon.querySelector("article").addEventListener("click", () => visDetaljer(ret))

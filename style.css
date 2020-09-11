@@ -11,12 +11,11 @@
       border-radius: 30px;
       object-fit: cover;
 
-
   }
 
   body {
 
-      background-image: linear-gradient(0deg, #9b5656, #cc7070);
+      background-image: linear-gradient(0deg, #1a1a1a, #242424);
 
   }
 
@@ -32,12 +31,10 @@
 
   #startside {
       width: 100vw;
-      height: 56.25vw;
+      height: 100vh;
       background-size: cover;
-      background-position: 50% 10%;
-      max-width: none;
-      min-height: 87vh;
-      background-image: url(imgs/pngbaggrund.png);
+
+      background-image: url(Img/forbillede-2.jpg);
       display: flex;
       justify-content: center;
       flex-direction: row;
@@ -51,16 +48,17 @@
       justify-content: center;
       position: sticky;
       top: 10px;
+      padding:
 
   }
 
   .kategori {
       border-radius: 17px;
-      background-color: #ffffff;
-      padding: 0px 0px 0px 0px;
+      background-color: #000000;
+      padding: 30px 250px 30px 250px;
       margin: 40px 20px 10px 20px;
       animation-timing-function: ease-in-out;
-      box-shadow: 5px 5px 12px rgb(137, 76, 76);
+
 
 
   }
@@ -69,7 +67,8 @@
       border-radius: 17px;
       border: none;
       padding: 15px 25px 15px 25px;
-      font-family: lato;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.1rem;
@@ -92,12 +91,12 @@
 
   .loopview {
       width: 70vw;
-      max-width: 900px;
+      max-width: 1100px;
       padding: 30px 0 0 0;
       margin: 0 auto;
       display: grid;
-      grid-gap: 5px;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
   }
 
@@ -120,15 +119,15 @@
   article {
       margin: 5px;
       border-radius: 30px;
-      background-color: rgb(250, 250, 250);
-      box-shadow: 5px 5px 12px rgb(108, 76, 76);
+
+
   }
 
 
   /*********** fonts ******/
 
   h1 {
-      font-family: 'Oswald', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 4.5rem;
       color: white;
       text-transform: uppercase;
@@ -141,7 +140,7 @@
 
 
   #startside h2 {
-      font-family: 'Oswald', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 1.7rem;
       color: white;
       text-transform: none;
@@ -155,20 +154,32 @@
   }
 
   h2 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.7rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 0.1rem;
-
-      top: 120px;
-
-
-      margin: 120px 0 25px 0;
+      padding: 0 0 0 15px;
+      margin: 10px 0 5px 0;
+      color: #ffffff;
+      font-weight: 500;
 
   }
 
+
+
+  h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+
+      letter-spacing: 0.1rem;
+      padding: 0 0 0 15px;
+      margin: 0px 0 25px 0;
+      font-weight: 300;
+      color: #c4c4c4;
+  }
+
   h4 {
-      font-family: 'Oswald', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 0.1rem;
@@ -182,19 +193,12 @@
 
   }
 
-  h2 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1rem;
-      padding: 0 0 0 15px;
-      margin: 15px 0 5px 0;
 
-  }
 
   p {
-      font-family: 'Oswald', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 0.9rem;
+      color: #bcbcbc;
       letter-spacing: 0.06rem;
       padding: 0 0 0 15px;
       margin: 10px 0 30px 0;
@@ -203,7 +207,7 @@
 
   p:last-child {
       padding: 0 0 10px 15px;
-      font-size: 1.3rem;
+      font-size: .7rem;
   }
 
 
@@ -312,10 +316,10 @@
 
   li {
       display: block;
-      color: #000000;
+      color: #ffffff;
       padding: 34px 10px;
       text-decoration: none;
-      font-family: 'Lato', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 1.2rem;
       letter-spacing: 0.11rem;
       font-weight: 400;
@@ -323,10 +327,10 @@
   }
 
   li a {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 1.2rem;
       text-decoration: none;
-      color: #000000;
+      color: #ffffff;
   }
 
 
@@ -373,7 +377,7 @@
 
 
   #menu_button a {
-      font-family: lato;
+      font-family: 'Montserrat', sans-serif;
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.1rem;
@@ -384,7 +388,7 @@
   }
 
   footer {
-      font-family: lato;
+      font-family: 'Montserrat', sans-serif;
       font-size: 1em;
       text-align: center;
       padding: 50px 0 50px 0;
