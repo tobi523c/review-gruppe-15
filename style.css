@@ -87,11 +87,8 @@
   }
 
   .valgt {
-      background-color: #8e5959;
-      animation-timing-function: ease-in-out;
-      animation-direction: alternate;
-      animation-duration: 2s;
-
+      color: #62AA7D;
+      text-decoration: underline;
 
   }
 
@@ -247,13 +244,13 @@
   }
 
   #popop_article {
-      width: 60vw;
-      height: 85vh;
-      margin: 4rem auto;
-      background-color: white;
+      width: 85vw;
+      height: 70vh;
+      margin: 9rem auto;
+      background-color: #101010;
       display: flex;
-      flex-wrap: wrap;
-      max-width: 700px;
+      flex-wrap: nowrap;
+      max-width: 1200px;
       position: relative;
 
 
@@ -264,7 +261,7 @@
       position: absolute;
       top: 20px;
       right: 28px;
-      color: black;
+      color: #ffffff;
       padding: 10px;
       font-family: lato;
       font-size: 1.5rem;
@@ -275,23 +272,53 @@
 
 
   #popop_article img {
+      object-fit: cover;
       max-width: 700px;
-      padding: 10px 10px 10px 10px;
+      max-height: 700px;
+      margin: 20px 20px 20px 20px;
+      padding: 0px 0px 0px 0px;
       border-radius: 30px;
 
   }
 
   #popop_article h2 {
-      padding: 0px 10px 5px 30px;
-
-
+      padding: 70px 10px 0px 30px;
+      font-size: 1.8rem;
   }
+
 
   #popop_article p {
       padding: 0px 10px 0px 30px;
 
 
+
   }
+
+  #popop_article .kunstner {
+      font-size: 1.2rem;
+      padding: 0px 10px 0px 30px;
+      margin: 0 0 0 0;
+      color: #c6c6c6;
+
+
+  }
+
+  #popop_article .genre {
+      font-size: 0.9rem;
+      margin: 0 0 40px 0;
+
+      padding: 10px 10px 0px 30px;
+      color: #b4b4b4;
+
+  }
+
+  #popop_article .beskrivelse {
+      font-size: 1rem;
+      line-height: 1.4rem;
+      font-weight: 400;
+
+  }
+
 
 
   /*********** nav ******/

@@ -46,10 +46,10 @@ function visAlbums() {
 
 function visDetaljer(album) {
     popop.style.display = "block";
-    popop.querySelector("h2").textContent = album.gsx$navn.$t;
-    popop.querySelector(".lang").textContent = album.gsx$beskrivelse.$t;
-    popop.querySelector(".oprindelse").textContent = album.gsx$genre.$t;
-    popop.querySelector(".pris").textContent = album.gsx$kunstner.$t;
+    popop.querySelector(".navn_popop").textContent = album.gsx$navn.$t;
+    popop.querySelector(".beskrivelse").textContent = album.gsx$beskrivelse.$t;
+    popop.querySelector(".genre").textContent = album.gsx$genre.$t;
+    popop.querySelector(".kunstner").textContent = album.gsx$kunstner.$t;
 
     popop.querySelector("img").src = album.gsx$billede.$t;
 
