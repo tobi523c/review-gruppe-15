@@ -1,4 +1,5 @@
 let retter;
+let albums;
 let filter = "alle"
 const popop = document.querySelector("#popop");
 document.addEventListener("DOMContentLoaded", loadJSON)
@@ -6,17 +7,17 @@ document.addEventListener("DOMContentLoaded", loadJSON)
 
 async function loadJSON() {
     const loadJSON = await fetch("https://spreadsheets.google.com/feeds/list/1BGsWxPo26S0q3MziijrBCP8GVN1qP2hOO3wCT_hygCk/od6/public/values?alt=json")
-    retter = await loadJSON.json();
+    albums = await loadJSON.json();
     addEventListenerToButtons();
-    visRetter();
+    visAlbums();
 }
 
-function visRetter() {
+function visAlbums() {
     const templatePointer = document.querySelector("template");
     const listPointer = document.querySelector(".loopview");
     listPointer.innerHTML = "";
-    retter.feed.entry.forEach(ret => {
-        if (filter == "alle" || filter == ret.gsx$kategori.$t) {
+    albums.feed.entry.forEach(ret => {
+        if (filter == "alle" || filter == ret.gsx$genre.$t.toLowerCase()) {
 
             const klon = templatePointer.cloneNode(true).content;
             klon.querySelector(".navn").textContent = ret.gsx$navn.$t;
@@ -66,12 +67,13 @@ function addEventListenerToButtons() {
 }
 
 function filterBTNs() {
-    filter = this.dataset.kategori;
+    filter = this.dataset.genre;
+    console.log(filter)
     document.querySelector("h2").textContent = this.textContent;
     document.querySelectorAll(".filter").forEach((btn) => {
         btn.classList.remove("valgt");
 
     })
     this.classList.add("valgt");
-    visRetter();
+    visAlbums();
 }
