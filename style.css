@@ -1,8 +1,15 @@
   /***********general******/
 
+
+  html {
+      scroll-behavior: smooth;
+  }
+
+
   * {
       box-sizing: border-box;
       margin: 0;
+
   }
 
   img {
@@ -18,6 +25,8 @@
       background-image: linear-gradient(0deg, #1a1a1a, #242424);
 
   }
+
+
 
   /***********general******/
 
@@ -39,7 +48,7 @@
       justify-content: center;
       flex-direction: row;
       flex-wrap: nowrap;
-
+      margin-bottom: 30px
   }
 
   .logo {
@@ -48,6 +57,7 @@
       height: 15vw;
       width: 37.725vw;
       margin: 35vh 0 0 0;
+      cursor: pointer;
   }
 
 
@@ -55,20 +65,51 @@
       display: flex;
       justify-content: center;
       position: sticky;
-      top: 5px;
-      padding:
+      top: 10px;
+      z-index: 1;
 
   }
 
   .kategori {
       border-radius: 17px;
       background-color: #000000;
-      padding: 30px 250px 30px 250px;
-      margin: 30px 20px 10px 20px;
+      padding: 25px 0px 25px 0px;
+      margin: 00px 00px 10px 00px;
+      width: 95vw;
       animation-timing-function: ease-in-out;
+      display: flex;
+      flex-direction: row;
 
 
 
+  }
+
+  .mellem {
+      border-right: 1px solid white;
+      margin: 0 10px 0 10px;
+  }
+
+
+  .filter_kategori {
+      padding: 15px 25px 15px 35px;
+      margin: 0 0 0 0;
+      color: white;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: 700;
+
+
+
+  }
+
+  #startside a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      color: #bcbcbc;
+      letter-spacing: 0.06rem;
+      text-decoration: none;
+      padding: 0px 0 40px 0;
   }
 
   button {
@@ -82,13 +123,15 @@
       letter-spacing: 0.1rem;
       font-weight: 500;
       background-color: rgba(255, 255, 255, 0);
+      cursor: pointer;
 
 
   }
 
   .valgt {
       color: #62AA7D;
-      text-decoration: underline;
+      font-size: 0.8rem;
+
 
   }
 
@@ -101,7 +144,15 @@
       margin: 0 auto;
       display: grid;
       grid-gap: 10px;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+
+  }
+
+
+  .loopview img:hover {
+      transform: scale(1.1);
+
 
   }
 
@@ -124,6 +175,7 @@
   article {
       margin: 5px;
       border-radius: 30px;
+      cursor: pointer;
 
 
   }
@@ -141,7 +193,16 @@
       background-size: cover;
       height: 2vw;
       width: 3.479vw;
+      cursor: pointer;
   }
+
+
+  #pil_container:hover {
+      transform: scale(1.1);
+
+
+  }
+
 
   .pil_position {
       top: 80vh;
@@ -285,6 +346,7 @@
       font-family: lato;
       font-size: 1.5rem;
       text-transform: uppercase;
+      cursor: pointer;
 
   }
 
@@ -559,4 +621,14 @@
 
 
       }
+
+
+      .logo {
+          background-image: url(svg_filer/logo_double.svg);
+          background-size: cover;
+          height: 30vw;
+          width: 75.45vw;
+          margin: 35vh 0 0 0;
+      }
+
   }

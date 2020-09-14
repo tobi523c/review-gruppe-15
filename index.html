@@ -22,9 +22,6 @@
                 <p class="beskrivelse"></p>
                 <p class="ratings"></p>
 
-
-
-
             </div>
         </article>
     </section>
@@ -43,8 +40,11 @@
         <section id="startside">
             <div class="logo"></div>
             <div id="pil_container" class="pil_position">
-                <p>EXPLORE ALBUMS</p>
-                <div id="pil_sprite"></div>
+                <a href="#loopview">
+                    EXPLORE ALBUMS
+                </a>
+                <a href="#loopview" id="pil_sprite"></a>
+
             </div>
 
 
@@ -57,13 +57,24 @@
 
             <div class="content">
                 <div class="kategori_container">
+
                     <div class="kategori">
+                        <p class="filter_kategori">filter</p>
+                        <div class="mellem"></div>
                         <button id="filter-alle" class="filter valgt" data-genre="alle">Alle</button>
                         <button class="filter" data-genre="pop">Pop</button>
                         <button class="filter" data-genre="rock">Rock</button>
                         <button class="filter" data-genre="hip-hop">Hiphop</button>
                         <button class="filter" data-genre="jazz">Jazz</button>
                         <button class="filter" data-genre="edm">EDM</button>
+                        <div class="mellem"></div>
+
+                        <button class="filter" data-genre="1980">1980's</button>
+                        <button class="filter" data-genre="1990">1990's</button>
+                        <button class="filter" data-genre="2000">2000's</button>
+                        <button class="filter" data-genre="2010">2010's</button>
+                        <button class="filter" data-genre="2020">2020's</button>
+                        <div class="mellem"></div>
 
                     </div>
                 </div>
@@ -90,4 +101,6 @@
     <script src="script.js">
 
     </script>
-</body></html>
+</body>
+
+</html>
