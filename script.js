@@ -1,4 +1,3 @@
-let retter;
 let albums;
 let filter = "alle";
 let filterpop = "";
