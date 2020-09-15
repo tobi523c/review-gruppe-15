@@ -6,6 +6,7 @@ let filterjazz = "";
 let filterhiphop = "";
 let filterEdm = "";
 const popop = document.querySelector("#popop");
+const kategoriOpen = document.querySelector(".kategori");
 
 document.addEventListener("DOMContentLoaded", loadJSON)
 
@@ -75,6 +76,7 @@ function addEventListenersToButtons() {
 function filterBTNs() {
     filter = this.dataset.genre;
 
+
     this.classList.toggle("valgt");
 
     document.querySelector("#filter-alle").classList.remove("valgt");
@@ -123,6 +125,25 @@ function filterBTNs() {
 
 
     visAlbums();
+
+
+}
+
+
+
+document.querySelector(".pil_menu_open").addEventListener("click", openKategori);
+
+
+
+function openKategori() {
+    console.log("openKategori");
+
+
+    document.querySelector("#kategori_alle").classList.toggle("display_filter")
+    document.querySelector("#kategori_alle1").classList.toggle("display_filter")
+    document.querySelector("#kategori_alle2").classList.toggle("display_filter")
+    document.querySelector(".pil_menu_open").classList.toggle("rotete")
+
 
 
 }

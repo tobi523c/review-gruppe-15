@@ -84,6 +84,22 @@
 
   }
 
+  #pil_menu {
+      background-image: url(svg_filer/pil_ned.svg);
+      background-size: cover;
+      margin: 15px 10px 15px 50px;
+      height: 17px;
+      width: 30px;
+      cursor: pointer;
+
+  }
+
+
+  .pil_menu_open {
+      display: none;
+      position: absolute;
+      right: 30px;
+  }
 
   .mellem {
       border-right: 1px solid white;
@@ -228,12 +244,13 @@
 
   }
 
-  /***********general******/
 
-  /*.display_filter{
-    display: none;
-}*/
+  .rotete {
+      transform: rotate(180deg);
+      animation-duration: 6s;
+      animation-timing-function: ease-in;
 
+  }
 
   /*********** fonts ******/
 
@@ -592,6 +609,16 @@
 
   @media screen and (max-width: 1000px) {
 
+      /***********display_filter******/
+
+      .display_filter {
+          display: none;
+      }
+
+      .pil_menu_open {
+          display: block;
+      }
+
       .kategori_container {
           display: flex;
           justify-content: center;
@@ -727,17 +754,28 @@
       }
 
 
+      .kategori_container {
+          display: flex;
+          justify-content: center;
+          position: sticky;
+          top: 10px;
+          z-index: 1;
+
+      }
+
       .kategori {
           border-radius: 17px;
           background-color: #000000;
-          padding: 30px 30px 30px 30px;
-          margin: 30px 20px 10px 20px;
+          padding: 0px 0px 0px 0px;
+          margin: 00px 00px 10px 00px;
+          width: 95vw;
           animation-timing-function: ease-in-out;
 
 
 
-      }
 
+
+      }
 
       .logo {
           background-image: url(svg_filer/logo_double.svg);
@@ -748,10 +786,7 @@
       }
 
 
-      .kategori_container {
-          display: none;
-
-      }
+      .kategori_container {}
 
 
 
