@@ -232,7 +232,7 @@ function filterBTNs3() {
     console.log("filterratings")
 
 
-    this.classList.toggle("valgt");
+    this.classList.toggle("valgtstjerne");
 
 
 

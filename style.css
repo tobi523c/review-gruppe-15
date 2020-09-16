@@ -253,11 +253,10 @@
 
 
 
-
-
-
   .valgtstjerne {
-      background-image: url(svg_filer/star_farvet.svg);
+      filter: invert(.5) sepia(1) saturate(2.5);
+
+
   }
 
 
