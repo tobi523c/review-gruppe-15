@@ -22,7 +22,7 @@
 
   body {
 
-      background-image: linear-gradient(0deg, #1a1a1a, #242424);
+      background-image: linear-gradient(0deg, #121212, #151515);
 
   }
 
@@ -72,12 +72,23 @@
       padding: 25px 0px 25px 0px;
       margin: 0 auto;
       width: 95vw;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
 
   }
 
-  .kategori {
+  .nowarp {
       display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      padding: 0 20px 0 0;
+
+
+
+  }
+
+  .kategori_alle2 {
+      display: flex;
+      flex-wrap: nowrap;
       flex-direction: row;
 
 
@@ -88,8 +99,8 @@
       background-image: url(svg_filer/pil_ned.svg);
       background-size: cover;
       margin: 15px 10px 15px 50px;
-      height: 17px;
-      width: 30px;
+      height: 12px;
+      width: 21px;
       cursor: pointer;
 
   }
@@ -237,10 +248,18 @@
       width: 13px;
       cursor: pointer;
       margin: 17px 10px 17px 10px;
+
+
   }
 
+  /*svg {
+      fill: #62AA7D;
+
+  }*/
+
   #stjerne_sprite:nth-child(1) {
-      margin: 17px 10px 0 30px;
+      margin: 17px 10px 0 23px;
+
 
   }
 
@@ -504,7 +523,7 @@
 
 
   li a:hover {
-      color: #ffffff;
+      color: #62AA7D;
   }
 
 
@@ -560,8 +579,10 @@
       font-size: 1em;
       text-align: center;
       padding: 50px 0 50px 0;
-      background-color: rgb(229, 215, 215);
+      background-color: #000000;
       font-family: lato;
+      color: #62AA7D;
+      ;
 
       text-transform: uppercase;
       letter-spacing: 0.1rem;
@@ -619,6 +640,8 @@
           display: block;
       }
 
+
+
       .kategori_container {
           display: flex;
           justify-content: center;
@@ -632,7 +655,7 @@
           border-radius: 17px;
           background-color: #000000;
           padding: 0px 0px 0px 0px;
-          margin: 00px 00px 10px 00px;
+          margin: 00px 00px 0px 00px;
           width: 95vw;
           animation-timing-function: ease-in-out;
 
@@ -674,11 +697,44 @@
       }
 
 
+      #luk {
+          background-color: rgba(0, 0, 0, 0.7);
+          border-radius: 15px;
+          padding: 8px 13px 8px 13px;
+      }
+
+      .nowarp {
+          padding: 0 65px 0 0px;
+
+
+
+      }
+
+
+
+
 
 
   }
 
+  @media screen and (max-width: 700px) {
+      .kategori_container {
+          display: flex;
+          justify-content: center;
+          position: sticky;
+          top: 10px;
+          z-index: 1;
+          padding: 15px 0px 15px 0px;
+          flex-wrap: wrap;
 
+      }
+
+      .mellem {
+          border-right: none;
+          margin: 0px 20px 0px 0px;
+      }
+
+  }
 
   @media screen and (max-width: 600px) {
       .sidebar {
@@ -760,6 +816,8 @@
           position: sticky;
           top: 10px;
           z-index: 1;
+          padding: 15px 0px 15px 0px;
+          flex-wrap: wrap;
 
       }
 
@@ -767,7 +825,7 @@
           border-radius: 17px;
           background-color: #000000;
           padding: 0px 0px 0px 0px;
-          margin: 00px 00px 10px 00px;
+          margin: 00px 00px 00px 00px;
           width: 95vw;
           animation-timing-function: ease-in-out;
 
