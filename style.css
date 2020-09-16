@@ -748,6 +748,12 @@
           font-size: 1.5rem;
       }
 
+
+      #popop_article img:nth-child(5) {
+          margin: 10px 30px 0 30px;
+          height: 20px;
+          width: 134.32px;
+      }
   }
 
   @media screen and (max-width: 600px) {
@@ -807,11 +813,7 @@
 
       }
 
-      #popop_article img:nth-child(5) {
-          margin: 10px 30px 0 30px;
-          height: 20px;
-          width: 134.32px;
-      }
+
 
 
 
