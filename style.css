@@ -57,7 +57,6 @@
       height: 15vw;
       width: 37.725vw;
       margin: 35vh 0 0 0;
-      cursor: pointer;
   }
 
 
@@ -74,6 +73,14 @@
       width: 95vw;
       flex-wrap: nowrap;
 
+  }
+
+  .kategori img {
+      padding: 0 0 0 0;
+      margin: 0 0 0 20px;
+      border-radius: 0;
+      height: 3vw;
+      width: 7.5vw;
   }
 
   .nowarp {
@@ -855,12 +862,16 @@
           margin: 00px 00px 00px 00px;
           width: 95vw;
           animation-timing-function: ease-in-out;
-
-
-
-
-
       }
+
+      .kategori img {
+          padding: 0 0 0 0;
+          margin: 10px 0 10px 20px;
+          border-radius: 0;
+          height: 5vw;
+          width: 12.5vw;
+      }
+
 
       .logo {
           background-image: url(svg_filer/logo_double.svg);
@@ -872,6 +883,7 @@
 
 
       .kategori_container {}
+
 
 
       button:first-child {
