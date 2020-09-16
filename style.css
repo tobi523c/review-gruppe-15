@@ -740,6 +740,11 @@
           margin: 0px 20px 0px 0px;
       }
 
+      #popop_article h2 {
+          padding: 0px 10px 0px 30px;
+          font-size: 1.5rem;
+      }
+
   }
 
   @media screen and (max-width: 600px) {
@@ -752,10 +757,7 @@
 
       }
 
-      #popop_article h2 {
-          padding: 0px 10px 0px 30px;
-          font-size: 1.8rem;
-      }
+
 
 
       #loopview {
@@ -801,6 +803,15 @@
           position: relative;
 
       }
+
+      #popop_article img:nth-child(5) {
+          margin: 10px 30px 0 30px;
+          height: 20px;
+          width: 134.32px;
+      }
+
+
+
 
       #luk {
           position: absolute;
