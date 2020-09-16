@@ -106,10 +106,7 @@
   }
 
 
-  .ratingsimg {
-      height: 25px;
-      width: 25px;
-  }
+
 
 
   .pil_menu_open {
@@ -438,6 +435,15 @@
 
 
   }
+
+  .ratingsimg {
+      margin: 0 20px 0 20px;
+      height: 25px;
+      width: 167.9px;
+
+
+  }
+
 
   #popop_article h2 {
       padding: 70px 10px 0px 30px;
