@@ -248,14 +248,13 @@
       width: 13px;
       cursor: pointer;
       margin: 17px 10px 17px 10px;
+  }
 
+  #stjerne_sprite:hover {
+      background-image: url(svg_filer/star_farvet.svg);
 
   }
 
-  /*svg {
-      fill: #62AA7D;
-
-  }*/
 
   #stjerne_sprite:nth-child(1) {
       margin: 17px 10px 0 23px;
