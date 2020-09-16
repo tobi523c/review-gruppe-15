@@ -386,7 +386,7 @@
       max-width: 1800px;
       display: none;
       z-index: 2;
-
+      overflow: auto;
 
   }
 
@@ -764,6 +764,8 @@
 
       #popop_article img {
           width: 90%;
+          max-height: 40%;
+
           margin: 25px auto;
           padding: 0px 0px 0px 0px;
 
@@ -774,8 +776,8 @@
 
       #popop_article {
           width: 90vw;
-          height: 100vh;
-          margin: 0rem auto;
+          height: 120vh;
+          margin: 0px auto;
           display: flex;
           flex-wrap: wrap;
           max-width: 500px;
