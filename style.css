@@ -106,6 +106,12 @@
   }
 
 
+  .ratingsimg {
+      height: 25px;
+      width: 25px;
+  }
+
+
   .pil_menu_open {
       display: none;
       position: absolute;
@@ -835,6 +841,19 @@
 
 
       .kategori_container {}
+
+
+      button:first-child {
+          margin: 0px 0px 0px 20px;
+      }
+
+      #stjerne_sprite:nth-child(1) {
+          margin: 17px 10px 0 34px;
+
+
+      }
+
+
 
 
 

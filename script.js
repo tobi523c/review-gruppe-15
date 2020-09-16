@@ -66,6 +66,7 @@ function visDetaljer(album) {
     popop.querySelector(".beskrivelse").textContent = album.gsx$beskrivelse.$t;
     popop.querySelector(".genre").textContent = album.gsx$genre.$t;
     popop.querySelector(".kunstner").textContent = album.gsx$kunstner.$t;
+    popop.querySelector(".ratingsimg").src = "svg_filer/" + album.gsx$ratings.$t + ".svg";
 
     popop.querySelector("img").src = album.gsx$billede.$t;
 
