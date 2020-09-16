@@ -1,6 +1,12 @@
 let albums;
 let filterår = "alle";
 let filter = "alle";
+let filterratings = "alle"
+let filterrating1 = "";
+let filterrating2 = "";
+let filterrating3 = "";
+let filterrating4 = "";
+let filterrating5 = "";
 let filterpop = "";
 let filterrock = "";
 let filterjazz = "";
@@ -21,6 +27,7 @@ async function loadJSON() {
     albums = await JSONData.json();
     addEventListenersToButtons();
     addEventListenersToButtons2();
+    addEventListenersToButtons3();
     visAlbums();
 
 }
@@ -31,7 +38,7 @@ function visAlbums() {
     const listPointer = document.querySelector(".loopview");
     listPointer.innerHTML = "";
     albums.feed.entry.forEach(album => {
-        if ((filter == "alle" || filterpop == album.gsx$genre.$t.toLowerCase() || filterrock == album.gsx$genre.$t.toLowerCase() || filterjazz == album.gsx$genre.$t.toLowerCase() || filterhiphop == album.gsx$genre.$t.toLowerCase() || filterEdm == album.gsx$genre.$t.toLowerCase()) && (filterår == "alle" || filter1980 == album.gsx$årstal.$t.toLowerCase() || filter1990 == album.gsx$årstal.$t.toLowerCase() || filter2000 == album.gsx$årstal.$t.toLowerCase() || filter2010 == album.gsx$årstal.$t.toLowerCase() || filter2020 == album.gsx$årstal.$t.toLowerCase())) {
+        if ((filter == "alle" || filterpop == album.gsx$genre.$t.toLowerCase() || filterrock == album.gsx$genre.$t.toLowerCase() || filterjazz == album.gsx$genre.$t.toLowerCase() || filterhiphop == album.gsx$genre.$t.toLowerCase() || filterEdm == album.gsx$genre.$t.toLowerCase()) && (filterår == "alle" || filter1980 == album.gsx$årstal.$t.toLowerCase() || filter1990 == album.gsx$årstal.$t.toLowerCase() || filter2000 == album.gsx$årstal.$t.toLowerCase() || filter2010 == album.gsx$årstal.$t.toLowerCase() || filter2020 == album.gsx$årstal.$t.toLowerCase()) && (filterratings == "alle" || filterrating1 == album.gsx$ratings.$t.toLowerCase() || filterrating2 == album.gsx$ratings.$t.toLowerCase() || filterrating3 == album.gsx$ratings.$t.toLowerCase() || filterrating4 == album.gsx$ratings.$t.toLowerCase() || filterrating5 == album.gsx$ratings.$t.toLowerCase())) {
             console.log(album);
             const klon = templatePointer.cloneNode(true).content;
             klon.querySelector(".navn").textContent = album.gsx$navn.$t;
@@ -45,6 +52,8 @@ function visAlbums() {
 
 
             listPointer.appendChild(klon);
+
+            console.log(filterrating2);
         }
     })
 
@@ -86,6 +95,18 @@ function addEventListenersToButtons2() {
 
 
         console.log(filterår)
+
+    });
+
+
+}
+
+function addEventListenersToButtons3() {
+    document.querySelectorAll(".filterratings").forEach((btn) => {
+        btn.addEventListener("click", filterBTNs3);
+
+
+        console.log(filterratings)
 
     });
 
@@ -153,7 +174,7 @@ function filterBTNs() {
 
 function filterBTNs2() {
     filterår = this.dataset.årstal;
-    console.log("filterBTNs2")
+    console.log("filterår")
 
 
     this.classList.toggle("valgt");
@@ -194,6 +215,61 @@ function filterBTNs2() {
             filter2020 = "2020";
         } else {
             filter2020 = "";
+        }
+    }
+
+
+
+
+    visAlbums();
+
+
+}
+
+
+function filterBTNs3() {
+    filterratings = this.dataset.ratings;
+    console.log("filterratings")
+
+
+    this.classList.toggle("valgt");
+
+
+
+
+    // Her starter årstal-filter
+
+    if (this.dataset.ratings == "1") {
+        if (filterrating1 == "") {
+
+            filterrating1 = "1";
+
+        } else {
+            filterrating1 = "";
+        }
+    } else if (this.dataset.ratings == "2") {
+        if (filterrating2 == "") {
+            filterrating2 = "2";
+        } else {
+            filterrating2 = "";
+        }
+    } else if (this.dataset.ratings == "3") {
+        if (filterrating3 == "") {
+            filterrating3 = "3";
+        } else {
+            filterrating3 = "";
+        }
+    } else if (this.dataset.ratings == "4") {
+        if (filterrating4 == "") {
+            filterrating4 = "4";
+        } else {
+            filterrating4 = "";
+        }
+    } else if (this.dataset.ratings == "5") {
+        if (filterrating5 == "") {
+            filterrating5 = "5";
+        } else {
+            filterrating5 = "";
         }
     }
 
