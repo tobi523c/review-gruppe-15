@@ -25,7 +25,7 @@ const kategoriOpen = document.querySelector(".kategori");
 document.addEventListener("DOMContentLoaded", loadJSON)
 
 
-//******************* Henter json
+//******************* Henter json-data
 
 async function loadJSON() {
     const JSONData = await fetch("https://spreadsheets.google.com/feeds/list/1BGsWxPo26S0q3MziijrBCP8GVN1qP2hOO3wCT_hygCk/od6/public/values?alt=json");
@@ -38,15 +38,21 @@ async function loadJSON() {
 }
 
 
-
+// funktionen der vælger hvilke data fra jsonfilen der skal bruges og hvor dataen skal klones til
 function visAlbums() {
+
+    // her udvælges template-tagget i html som destination for json-dataen
 
     const templatePointer = document.querySelector("template");
     const listPointer = document.querySelector(".loopview");
     listPointer.innerHTML = "";
 
+    //her udvælges json-dataen fra googlesheetet ud fra hvilken "filter-kategori" de tilhører
+
     albums.feed.entry.forEach(album => {
         if ((filter == "alle" || filterpop == album.gsx$genre.$t.toLowerCase() || filterrock == album.gsx$genre.$t.toLowerCase() || filterjazz == album.gsx$genre.$t.toLowerCase() || filterhiphop == album.gsx$genre.$t.toLowerCase() || filterEdm == album.gsx$genre.$t.toLowerCase()) && (filterår == "alle" || filter1980 == album.gsx$årstal.$t.toLowerCase() || filter1990 == album.gsx$årstal.$t.toLowerCase() || filter2000 == album.gsx$årstal.$t.toLowerCase() || filter2010 == album.gsx$årstal.$t.toLowerCase() || filter2020 == album.gsx$årstal.$t.toLowerCase()) && (filterratings == "alle" || filterrating1 == album.gsx$ratings.$t.toLowerCase() || filterrating2 == album.gsx$ratings.$t.toLowerCase() || filterrating3 == album.gsx$ratings.$t.toLowerCase() || filterrating4 == album.gsx$ratings.$t.toLowerCase() || filterrating5 == album.gsx$ratings.$t.toLowerCase())) {
+
+            // her klones den udvalgte json-data ind i templaten i html'en
 
             const klon = templatePointer.cloneNode(true).content;
             klon.querySelector(".navn").textContent = album.gsx$navn.$t;
@@ -68,7 +74,12 @@ function visAlbums() {
 
 }
 
+//funktionen der vælger hvilke data fra jsonfilen der skal bruges og hvor dataen skal klones til
+
 function visDetaljer(album) {
+
+    // her udvælges popop-section fra html som destination for vores json-data
+
     popop.style.display = "block";
     popop.querySelector(".navn_popop").textContent = album.gsx$navn.$t;
     popop.querySelector(".beskrivelse").textContent = album.gsx$beskrivelse.$t;
@@ -83,9 +94,12 @@ function visDetaljer(album) {
 
 }
 
+// klikkes der på "x'et" i popop-vinduet, får popop display:none og vises derfor ikke længere
+
 document.querySelector("#luk").addEventListener("click", () => popop.style.display = "none");
 
 
+// funktionen for aktiveringen af knap 1: filter-genre
 
 function addEventListenersToButtons() {
     document.querySelectorAll(".filter").forEach((btn) => {
@@ -100,6 +114,9 @@ function addEventListenersToButtons() {
 
 }
 
+// funktionen for aktiveringen af knap 2: filter-årstal
+
+
 function addEventListenersToButtons2() {
     document.querySelectorAll(".filterår").forEach((btn) => {
         btn.addEventListener("click", filterBTNs2);
@@ -111,6 +128,9 @@ function addEventListenersToButtons2() {
 
 
 }
+
+// funktionen for aktiveringen af knap 3: filter-ratings
+
 
 function addEventListenersToButtons3() {
     document.querySelectorAll(".filterratings").forEach((btn) => {
