@@ -269,7 +269,7 @@
       height: 13px;
       width: 13px;
       cursor: pointer;
-      margin: 17px 10px 17px 10px;
+      margin: 15px 10px 17px 10px;
   }
 
 
@@ -286,7 +286,7 @@
 
 
   #stjerne_sprite:nth-child(1) {
-      margin: 17px 10px 0 23px;
+      margin: 15px 10px 0 23px;
 
 
   }
@@ -867,7 +867,7 @@
 
       #popop_article {
           width: 90vw;
-          height: 120vh;
+          height: 130vh;
           margin: 0px auto;
           display: flex;
           flex-wrap: wrap;
@@ -918,7 +918,7 @@
 
       .kategori img {
           padding: 0 0 0 0;
-          margin: 5px 0 5px 30px;
+          margin: 5px 0 5px 25px;
           border-radius: 0;
 
       }
@@ -942,7 +942,7 @@
       }
 
       #stjerne_sprite:nth-child(1) {
-          margin: 17px 10px 0 34px;
+          margin: 15px 10px 0 25px;
 
 
       }
@@ -952,6 +952,12 @@
           margin: 25px 20px 5px 20px;
           border-radius: 20px;
           width: 300px;
+      }
+
+      .loopview {
+          width: 85vw;
+
+
       }
 
 
