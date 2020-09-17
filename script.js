@@ -1,3 +1,5 @@
+//*******************Variabler
+
 let albums;
 let filterår = "alle";
 let filter = "alle";
@@ -22,6 +24,9 @@ const kategoriOpen = document.querySelector(".kategori");
 
 document.addEventListener("DOMContentLoaded", loadJSON)
 
+
+//******************* Henter json
+
 async function loadJSON() {
     const JSONData = await fetch("https://spreadsheets.google.com/feeds/list/1BGsWxPo26S0q3MziijrBCP8GVN1qP2hOO3wCT_hygCk/od6/public/values?alt=json");
     albums = await JSONData.json();
@@ -32,11 +37,14 @@ async function loadJSON() {
 
 }
 
+
+
 function visAlbums() {
 
     const templatePointer = document.querySelector("template");
     const listPointer = document.querySelector(".loopview");
     listPointer.innerHTML = "";
+
     albums.feed.entry.forEach(album => {
         if ((filter == "alle" || filterpop == album.gsx$genre.$t.toLowerCase() || filterrock == album.gsx$genre.$t.toLowerCase() || filterjazz == album.gsx$genre.$t.toLowerCase() || filterhiphop == album.gsx$genre.$t.toLowerCase() || filterEdm == album.gsx$genre.$t.toLowerCase()) && (filterår == "alle" || filter1980 == album.gsx$årstal.$t.toLowerCase() || filter1990 == album.gsx$årstal.$t.toLowerCase() || filter2000 == album.gsx$årstal.$t.toLowerCase() || filter2010 == album.gsx$årstal.$t.toLowerCase() || filter2020 == album.gsx$årstal.$t.toLowerCase()) && (filterratings == "alle" || filterrating1 == album.gsx$ratings.$t.toLowerCase() || filterrating2 == album.gsx$ratings.$t.toLowerCase() || filterrating3 == album.gsx$ratings.$t.toLowerCase() || filterrating4 == album.gsx$ratings.$t.toLowerCase() || filterrating5 == album.gsx$ratings.$t.toLowerCase())) {
 
