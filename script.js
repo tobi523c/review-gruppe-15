@@ -39,7 +39,7 @@ function visAlbums() {
     listPointer.innerHTML = "";
     albums.feed.entry.forEach(album => {
         if ((filter == "alle" || filterpop == album.gsx$genre.$t.toLowerCase() || filterrock == album.gsx$genre.$t.toLowerCase() || filterjazz == album.gsx$genre.$t.toLowerCase() || filterhiphop == album.gsx$genre.$t.toLowerCase() || filterEdm == album.gsx$genre.$t.toLowerCase()) && (filterår == "alle" || filter1980 == album.gsx$årstal.$t.toLowerCase() || filter1990 == album.gsx$årstal.$t.toLowerCase() || filter2000 == album.gsx$årstal.$t.toLowerCase() || filter2010 == album.gsx$årstal.$t.toLowerCase() || filter2020 == album.gsx$årstal.$t.toLowerCase()) && (filterratings == "alle" || filterrating1 == album.gsx$ratings.$t.toLowerCase() || filterrating2 == album.gsx$ratings.$t.toLowerCase() || filterrating3 == album.gsx$ratings.$t.toLowerCase() || filterrating4 == album.gsx$ratings.$t.toLowerCase() || filterrating5 == album.gsx$ratings.$t.toLowerCase())) {
-            console.log(album);
+
             const klon = templatePointer.cloneNode(true).content;
             klon.querySelector(".navn").textContent = album.gsx$navn.$t;
             klon.querySelector(".genre").textContent = album.gsx$genre.$t;
@@ -53,7 +53,7 @@ function visAlbums() {
 
             listPointer.appendChild(klon);
 
-            console.log(filterrating2);
+
         }
     })
 
@@ -84,7 +84,8 @@ function addEventListenersToButtons() {
         btn.addEventListener("click", filterBTNs);
 
 
-        console.log(filter)
+
+
 
     });
 
@@ -96,7 +97,7 @@ function addEventListenersToButtons2() {
         btn.addEventListener("click", filterBTNs2);
 
 
-        console.log(filterår)
+
 
     });
 
@@ -108,7 +109,6 @@ function addEventListenersToButtons3() {
         btn.addEventListener("click", filterBTNs3);
 
 
-        console.log(filterratings)
 
     });
 
@@ -116,13 +116,24 @@ function addEventListenersToButtons3() {
 }
 
 function filterBTNs() {
-    filter = this.dataset.genre;
 
+    filter = this.dataset.genre;
 
     this.classList.toggle("valgt");
 
+    console.log("alle", document.querySelectorAll(".valgt").length);
 
-    console.log(filter)
+    if (document.querySelectorAll(".valgt").length == 0) {
+
+        filter = "alle"
+
+    }
+
+
+
+
+
+
 
 
     if (this.dataset.genre == "pop") {
@@ -168,10 +179,14 @@ function filterBTNs() {
 
     }
 
+
+
     visAlbums();
 
 
 }
+
+
 
 
 function filterBTNs2() {
@@ -180,6 +195,13 @@ function filterBTNs2() {
 
 
     this.classList.toggle("valgt");
+
+    if (document.querySelectorAll(".valgt").length == 0) {
+
+        filterår = "alle"
+
+    }
+
 
 
 
@@ -235,6 +257,13 @@ function filterBTNs3() {
 
 
     this.classList.toggle("valgtstjerne");
+
+
+    if (document.querySelectorAll(".valgtstjerne").length == 0) {
+
+        filterratings = "alle"
+
+    }
 
 
 
@@ -297,6 +326,7 @@ document.querySelector(".pil_menu_open").addEventListener("click", openKategori)
 function openKategori() {
     console.log("openKategori");
 
+    document.querySelector(".filter_overskrift").classList.toggle("filter_overskrift_af")
     document.querySelector("#mellem1").classList.toggle("display_filter")
     document.querySelector("#mellem2").classList.toggle("display_filter")
     document.querySelector("#mellem3").classList.toggle("display_filter")
