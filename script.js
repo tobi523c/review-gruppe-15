@@ -143,6 +143,10 @@ function addEventListenersToButtons3() {
 
 }
 
+
+// Denne funktion vælger genre indefor kategorien "genre", det valgte vises ved click på de forskellige knapper.
+
+
 function filterBTNs() {
 
     filter = this.dataset.genre;
@@ -156,13 +160,6 @@ function filterBTNs() {
         filter = "alle"
 
     }
-
-
-
-
-
-
-
 
     if (this.dataset.genre == "pop") {
         if (filterpop == "") {
@@ -216,6 +213,7 @@ function filterBTNs() {
 
 
 
+// Denne funktion vælger genre indefor kategorien "årstal", det valgte vises ved click på de forskellige knapper.
 
 function filterBTNs2() {
     filterår = this.dataset.årstal;
@@ -278,6 +276,7 @@ function filterBTNs2() {
 
 }
 
+// Denne funktion viser albums, indenfor det valgte antal stjerner der er trykket på.
 
 function filterBTNs3() {
     filterratings = this.dataset.ratings;
@@ -344,12 +343,9 @@ function filterBTNs3() {
 
 
 
-
-
+// lukke og åben funktion til kategori-bar
 
 document.querySelector(".pil_menu_open").addEventListener("click", openKategori);
-
-
 
 function openKategori() {
     console.log("openKategori");
