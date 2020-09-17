@@ -359,6 +359,4 @@ function openKategori() {
     document.querySelector("#kategori_alle2").classList.toggle("display_filter")
     document.querySelector(".pil_menu_open").classList.toggle("rotete")
 
-
-
 }
