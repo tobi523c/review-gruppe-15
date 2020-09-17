@@ -404,13 +404,13 @@
   }
 
   #popop_article {
-      width: 85vw;
-      height: 65vh;
+      width: 95vw;
+      height: 70vh;
       margin: 9rem auto;
       background-color: #101010;
       display: flex;
       flex-wrap: nowrap;
-      max-width: 1200px;
+      max-width: 1300px;
       position: relative;
       z-index: 2;
 
@@ -437,7 +437,7 @@
   #popop_article img {
       object-fit: cover;
       max-width: 500px;
-      max-height: 600px;
+      max-height: 700px;
       margin: 20px 20px 20px 20px;
       padding: 0px 0px 0px 0px;
       border-radius: 20px;
@@ -697,7 +697,7 @@
 
       #popop_article {
           width: 90vw;
-          height: 100vh;
+          height: 120vh;
           margin: 0rem auto;
           display: flex;
           flex-wrap: wrap;
@@ -730,7 +730,11 @@
 
       }
 
-
+      #popop_article img:nth-child(6) {
+          margin: 10px 30px 0 30px;
+          height: 20px;
+          width: 134.32px;
+      }
 
 
 
@@ -760,11 +764,10 @@
       }
 
 
-      #popop_article img:nth-child(5) {
-          margin: 10px 30px 0 30px;
-          height: 20px;
-          width: 134.32px;
-      }
+
+
+
+
   }
 
   @media screen and (max-width: 600px) {
